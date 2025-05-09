@@ -1,0 +1,99 @@
+<% layout("layouts/boilerplate") %>
+
+	<% let date=new Date(); date.setDate(date.getDate() + 1); date=date.toLocaleDateString("en-GB", {month: "2-digit"
+		,day: "2-digit" ,year: "numeric" }).split("/").join(".") %>
+
+
+		
+		<form action="/" method="post">
+			<div>
+<div class="top">
+	<!-- <img src="https://imgs.search.brave.com/at6UEOTstEdsxHlYn-fMWquGA4ebWi3CGaveVgxN9HU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vNDc0NDY3/My84NTQyL2kvNDUw/L2RlcG9zaXRwaG90/b3NfODU0MjE3MTgt/c3RvY2stcGhvdG8t/bG9va2luZy1vdXQt/dGhlLXdpbmRvd3Mt/b2YuanBn" alt=""> -->
+	<p class="text">Book cheap flights other sites simply can’t find.</p>
+</div>
+
+				<div class="center">
+					<div class="input-group input-group-lg">
+						<label for="from" class="form-control heading-label">FROM</label>
+						<label for="to" class="form-control heading-label">TO</label>
+						<label for="date" class="form-control heading-label">DEPARTURE</label>
+						<label for="passengerCount" class="form-control heading-label">TRAVELLERS</label>
+					</div>
+					<div class="input-group input-group-lg">
+						<input list="airports" type="text" aria-label="from" class="form-control index-input"
+							value="DEL" name="from" autocomplete="false" required>
+						<input list="airports" type="text" aria-label="to" class="form-control index-input" value="BOM"name="to" autocomplete="false" required>
+						<datalist id="airports">
+							<% for (let airport of airports) { %>
+								<option value=<%=airport.IATA_code %>><%= airport.city_name %>
+								</option>
+								<% } %>
+						</datalist>
+						<input type="text" id="datepicker" aria-label="date" class="form-control index-input"
+							name="date" value="<%= date %>" autocomplete="false" required>
+						<select class="form-control" name="passengerCount" required>
+							<option value=1>1</option>
+							<option value=2>2</option>
+							<option value=3>3</option>
+							<option value=4>4</option>
+							<option value=5>5</option>
+							<option value=6>6</option>
+						</select>
+					</div>
+					<div class="bt">
+						<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+							<input type="radio" class="btn-check" name="group" id="group1" autocomplete="off"
+								value="Economy" checked>
+							<label class="btn btn-outline-secondary" for="group1">Economy</label>
+
+							<input type="radio" class="btn-check" name="group" id="group2" autocomplete="off"
+								value="Premium">
+							<label class="btn btn-outline-secondary" for="group2">Premium</label>
+
+							<input type="radio" class="btn-check" name="group" id="group3" autocomplete="off"
+								value="Business">
+							<label class="btn btn-outline-secondary" for="group3">Business</label>
+						</div>
+						<button type="submit" class="btn btn-dark btn-lg button">SEARCH</button>
+					</div>
+				</div>
+
+				<div class="flex box ">
+					<div class="flex-none w-33 ">
+						<img src="https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fcommon%2FSearchUSP%402x.png&width=256&height=160&dpr=2" alt="TripNow" class="img_TripNow">
+						<div>
+						<strong>
+
+							One search, all the flights
+						</strong></div>
+						<div>
+							Kiwi-Code finds cheap flights other sites can’t see.
+						</div>
+					</div>
+					<div class="flex-none w-33 ">
+						<img src="https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fcommon%2FTravelHackUSP%402x.png&width=256&height=160&dpr=2" alt="TripNow" class="img_TripNow">
+						<div>
+						<strong>
+
+							Travel more, spend less
+						</strong></div>
+						<div>
+							Look for the travel hack star icon for unique travel itineraries.
+						</div>
+					</div>
+					<div class="flex-none w-33 ">
+						<img src="https://images.skypicker.com/?image=https%3A%2F%2Fimages.kiwi.com%2Fcommon%2FTrustUSP%402x.png&width=256&height=160&dpr=2" alt="TripNow" class="img_TripNow">
+						<div>
+						<strong>
+Trusted by millions
+						</strong></div>
+						<div>
+						Join over 10 million yearly travelers booking with ease.
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</form>
+
+		<script src="/scripts/datePicker.js"></script>

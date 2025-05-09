@@ -1,0 +1,43 @@
+{
+  "name": "TripNow",
+  "version": "1.0.0",
+  "description": "Airline Reservations System",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshat-rawat/TripNow.git"
+  },
+  "author": "Akshat Rawat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshat-rawat/TripNow/issues"
+  },
+  "homepage": "https://github.com/akshat-rawat/TripNow#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "ejs-mate": "^3.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-session": "^1.17.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.7",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "otp-generator": "^4.0.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0"
+  }
+}
