@@ -6,18 +6,18 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akshat-rawat/TripNow.git"
+    "url": "git+https://github.com/pratik/TripNow.git"
   },
-  "author": "Akshat Rawat",
+  "author": "pratik",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akshat-rawat/TripNow/issues"
+    "url": "https://github.com/pratik/TripNow/issues"
   },
-  "homepage": "https://github.com/akshat-rawat/TripNow#readme",
+  "homepage": "https://github.com/pratik/TripNow#readme",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",

@@ -1,106 +1,65 @@
-# TripNow
+# TripNow ✈️
 
-TripNow is a website where users can search, book and/or cancel flight tickets.
+TripNow is a next-generation AI-powered flight booking application featuring a stunning Glassmorphism UI and dynamic flight generation powered by Google Gemini AI. This project serves as a showcase of modern frontend architecture and AI integration.
 
-https://user-images.githubusercontent.com/78139798/123645171-b8d04f00-d843-11eb-8119-1d20533a5b05.mp4
+## Features ✨
 
-<br>
+- **AI Flight Generation**: Integrates with Google Gemini to generate dynamic, realistic flight routes, pricing, and timings based on user prompts.
+- **Modern SPA Architecture**: Built with React and Vite for blazing-fast client-side routing without page reloads.
+- **Glassmorphism UI**: Premium visual aesthetics using translucent backgrounds, gradients, and custom CSS.
+- **Dynamic Booking Engine**:
+  - Interactive custom passenger dropdown (Adults + Children).
+  - Real-time total calculation based on AI-generated flight prices.
+  - Interactive modal overlays for booking confirmation.
+- **Promo Code System**: Dynamic validation and real-time discount calculation (Use code `SUMMER2026`).
+- **Booking History**: State-managed mock authentication flow displaying categorized "Upcoming" and "Past" bookings.
 
-## Live Demo
+## Tech Stack 🛠️
 
-To see the project in action, go to [http://TripNow-official.herokuapp.com/](http://TripNow-official.herokuapp.com/)
+- **Frontend**: React.js, Vite, Vanilla CSS (Glassmorphism design system)
+- **Backend**: Node.js, Express.js
+- **AI Integration**: Google Gemini API (`gemini-2.5-flash`)
+- **Deployment Ready**: Configured for Render as a unified Web Service (Express serves compiled React static files).
 
-<br>
+## Installation & Setup 🚀
 
-## Getting Started
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/pratik/TripNow.git
+   cd TripNow
+   ```
 
-### Prerequisites
+2. **Install Backend Dependencies**:
+   ```bash
+   npm install
+   ```
 
-1. **Node.js** for running server-side JavaScript. You can find instructions on how to download and install Node.js for your computer [here](https://nodejs.org/en/download/).
+3. **Install Frontend Dependencies**:
+   ```bash
+   cd frontend
+   npm install
+   cd ..
+   ```
 
-2. **MongoDB** (Community Edition preferrably) to store data. Instructions on downloading and installing MongoDB on your computer can be found [here](https://docs.mongodb.com/manual/installation/).
+4. **Environment Variables**:
+   Create a `.env` file in the root directory and add your Gemini API Key:
+   ```env
+   GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-### Installing
+5. **Run Locally**:
+   To run both backend and frontend concurrently for development, use two terminal windows:
+   - Terminal 1 (Backend): `npm run dev`
+   - Terminal 2 (Frontend): `cd frontend && npm run dev`
 
-Once you have Node.js and MongoDB installed on your computer,
+## Deployment 🌐
 
-#### Clone or download this repository.
+This app is pre-configured to be deployed as a single Web Service on Render:
+1. Connect this repo to Render.
+2. Set Build Command: `npm run build`
+3. Set Start Command: `npm start`
+4. Add the `GEMINI_API_KEY` to Render Environment Variables.
 
-```sh
-git clone https://github.com/akshat-rawat/TripNow.git
-```
-
-#### Change the folder and Install dependencies.
-
-```sh
-cd TripNow
-npm install
-```
-
-#### Create a `.env` file and add the following:
-
-```sh
-seshSECRET = <session secret>
-dbSECRET = <database secret>
-```
-
-#### Run the project.
-
-```sh
-npm start
-```
-
-#### Open your web browser and visit the address `localhost:3000` and voila!
-
-<br>
-
-## Features
-
-- Authentication:
-
-  - User login with email and password.
-  - For new user, there is a sign-up option.
-
-- Authorization:
-
-  - User can only book and cancel ticktets after logging in.
-  - User cannot cancel flight tickets without being authenticated.
-
-- Ticket booking functionalities:
-
-  - Search for tickets with necessary parameters.
-  - Filter search by price, duration or alphatical order.
-
-- Contact feature for any queries.
-
-- Flash messages responding to users' interaction with the app.
-
-- Responsive web design.
-
-<br>
-
-## Built with
-
-### Front-end
-
-- [ejs](http://ejs.co/)
-- [bootstrap](https://getbootstrap.com/)
-- [jQuery](https://jquery.com/)
-
-### Back-end
-
-- [node.js](https://nodejs.org/en/)
-- [express](https://expressjs.com/)
-- [mongoDB](https://www.mongodb.com/)
-- [mongoose](http://mongoosejs.com/)
-- [async](http://caolan.github.io/async/)
-- [helmet](https://helmetjs.github.io/)
-- [passport](http://www.passportjs.org/)
-- [express-session](https://github.com/expressjs/session#express-session)
-- [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
-
-### Platforms
-
-- [git](https://git-scm.com/)
-- [heroku](https://www.heroku.com/)
-- [github](https://github.com/)
+## Author 👨‍💻
+**Pratik**
+Frontend Developer
