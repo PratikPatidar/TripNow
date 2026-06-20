@@ -1,4 +1,4 @@
-# TripNow ✈️
+# TripNow ✈️ 🌐
 
 TripNow is a next-generation AI-powered flight booking application featuring a stunning Glassmorphism UI and dynamic flight generation powered by Google Gemini AI. This project serves as a showcase of modern frontend architecture and AI integration.
 
