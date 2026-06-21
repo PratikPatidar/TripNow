@@ -5,9 +5,9 @@ const HotelsPage = () => (
     
     <div className="destinations-grid">
       {[
-        { id: 1, title: 'The Ritz, Paris', price: '$450/night', img: 'https://images.unsplash.com/photo-1542314831-c6a4d1409e1f?auto=format&fit=crop&w=600&q=80' },
-        { id: 2, title: 'Aman, Tokyo', price: '$800/night', img: 'https://images.unsplash.com/photo-1551882547-ff40c0d5b9af?auto=format&fit=crop&w=600&q=80' },
-        { id: 3, title: 'Four Seasons, Bali', price: '$350/night', img: 'https://images.unsplash.com/photo-1582719478250-c894e4dc240e?auto=format&fit=crop&w=600&q=80' }
+        { id: 1, title: 'The Ritz, Paris', price: '$450/night', img: '/hotels/paris.jpg' },
+        { id: 2, title: 'Aman, Tokyo', price: '$800/night', img: '/hotels/tokyo.jpg' },
+        { id: 3, title: 'Four Seasons, Bali', price: '$350/night', img: '/hotels/bali.jpg' }
       ].map(hotel => (
         <div key={hotel.id} className="destination-card">
           <img src={hotel.img} alt={hotel.title} className="destination-img" />
